@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hao-security-app/hao-security-app.iml" filepath="$PROJECT_DIR$/hao-security-app/hao-security-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hao-security-browser/hao-security-browser.iml" filepath="$PROJECT_DIR$/hao-security-browser/hao-security-browser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hao-security-core/hao-security-core.iml" filepath="$PROJECT_DIR$/hao-security-core/hao-security-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hao-security-demo/hao-security-demo.iml" filepath="$PROJECT_DIR$/hao-security-demo/hao-security-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_security.iml" filepath="$PROJECT_DIR$/spring_security.iml" />
+    </modules>
+  </component>
+</project>
