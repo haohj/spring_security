@@ -1,4 +1,4 @@
-package com.hao.security.controller;
+package com.hao.security.web.controller;
 
 import com.hao.security.entity.User;
 import com.hao.security.entity.UserQueryCondition;

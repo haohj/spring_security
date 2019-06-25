@@ -1,6 +1,7 @@
 # spring_security
 spring security study
-
+##异常处理
+###自定义异常
 
 ### filter
 
@@ -12,4 +13,5 @@ spring security study
 
 ### aspect
 
-可以拦截方法并知道类、方法及参数类型和参数具体的值
++ 可以拦截方法并知道类、方法及参数类型和参数具体的值
++ 可以配置拦截的url
