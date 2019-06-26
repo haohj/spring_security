@@ -2,6 +2,10 @@
 spring security study
 ##异常处理
 ###自定义异常
++ 新建一个异常类继承RuntimeException
++ 新建一个异常处理类，在类上使用注解@ControllerAdvice
++ 在异常处理类中写一个异常处理方法。在方法的@ExceptionHandler注解中写上异常类，例如：@ExceptionHandler(UserNotExistException.class)
++ 在方法的参数中传入异常类，当其他地方抛出此异常时就会调用此异常处理方法，用参入的异常类就可以拿到异常类中的属性
 
 ### filter
 + Filter在只在 Servlet 前后起作用。
