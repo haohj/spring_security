@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="hao-security-core" />
         <module name="hao-security-app" />
         <module name="hao-security-browser" />
-        <module name="hao-security-core" />
         <module name="hao-security-demo" />
       </profile>
     </annotationProcessing>
@@ -17,8 +17,6 @@
       <module name="hao-security-browser" target="1.8" />
       <module name="hao-security-core" target="1.8" />
       <module name="hao-security-demo" target="1.8" />
-      <module name="haosecurity-app" target="1.8" />
-      <module name="haosecuritybrowser" target="1.8" />
       <module name="spring_security" target="1.8" />
     </bytecodeTargetLevel>
   </component>
