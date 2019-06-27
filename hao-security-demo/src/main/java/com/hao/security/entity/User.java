@@ -1,12 +1,15 @@
 package com.hao.security.entity;
 
 import com.hao.security.validator.MyConstraint;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import org.codehaus.jackson.map.annotate.JsonView;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.Past;
 import java.util.Date;
 
+@ApiModel
 public class User {
     public interface UserSimpleView{};
     public interface UserDetailsView extends UserSimpleView{};
@@ -15,6 +18,7 @@ public class User {
     private String id;
     @Past(message = "生日必须是一个过去的日期")
     private Date birthdate;
+    @ApiModelProperty("用户名")
     @MyConstraint(message = "这是一个测试")
     private String username;
     @NotBlank(message = "密码不能为空")
