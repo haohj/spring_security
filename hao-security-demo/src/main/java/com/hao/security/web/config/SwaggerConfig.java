@@ -17,7 +17,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.lemon.security.web.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.hao.security.web.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
