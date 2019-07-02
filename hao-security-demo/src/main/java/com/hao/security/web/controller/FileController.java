@@ -14,16 +14,12 @@ import java.io.*;
 
 @RestController("/file")
 public class FileController {
-    private String folder = new Object() {
-        public String getPath() {
-            return this.getClass().getClassLoader().getResource("").getPath();
-        }
-    }.getPath();
+    private String folder = "D:\\MyCode\\spring_security\\hao-security-demo\\src\\main\\java\\com\\hao\\security\\web\\controller";
     @PostMapping
     public FileInfo upload(MultipartFile file) throws Exception {
-        System.out.println(file.getName());
-        System.out.println(file.getOriginalFilename());
-        System.out.println(file.getOriginalFilename());
+        System.out.println("上传文件的表单name值为：" + file.getName());
+        System.out.println("文件路径为：" + file.getOriginalFilename());
+        System.out.println("文件大小为：" + file.getSize());
         File localFile = new File(folder, System.currentTimeMillis() + ".txt");
         file.transferTo(localFile);
         return new FileInfo(localFile.getAbsolutePath());
