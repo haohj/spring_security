@@ -1,15 +1,13 @@
 package com.hao.security.web.controller;
 
 import com.hao.security.entity.FileInfo;
-import org.apache.commons.io.IOUtils;
-import org.omg.CORBA.portable.OutputStream;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletOutputStream;
+import cn.hutool.core.io.IoUtil;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -32,15 +30,22 @@ public class FileController {
     }
 
     @GetMapping("/{id}")
-    public void donwload(@PathVariable String id, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        try (InputStream inputStream = new FileInputStream(new File(folder, id + ".txt"));
-             ServletOutputStream outputStream = response.getOutputStream();
+    public void download(@PathVariable String id, HttpServletRequest request, HttpServletResponse response) {
+        System.out.println(folder);
+        try (
+                // 这是JDK7的特性，关于流的操作，可以写在try后面的圆括号里，这样就无需手动关闭流
+                InputStream inputStream = new FileInputStream(new File(folder, id + ".txt"));
+                OutputStream outputStream = response.getOutputStream()
         ) {
-            response.setHeader("Content-Disposition", "attachment;filename=test.txt");
+            // 设置下载的文件类型
             response.setContentType("application/x-download");
-
-            IOUtils.copy(inputStream, outputStream);
+            // 设置下载后的文件名
+            response.setHeader("Content-Disposition", "attachment;filename=test.txt");
+            IoUtil.copy(inputStream, outputStream);
+            // 刷新输出流
             outputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
