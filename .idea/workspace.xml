@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4134c2f3-ff34-4dc8-9422-9f4beb707745" name="Default" comment="spring security start">
+      <change afterPath="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_6_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_1_0_Final.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hao-security-demo/hao-security-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-demo/hao-security-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hao-security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/DemoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-demo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <list id="35de8f33-30e2-42e7-be04-8b611dcc9062" name="ignored" comment="">
       <change beforePath="$PROJECT_DIR$/hao-security-demo/target/classes/META-INF/hao-security-demo.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hao-security-demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-demo/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-demo/target/classes/com/hao/security/DemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-demo/target/classes/com/hao/security/DemoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hao-security-demo/target/classes/com/hao/security/controller/UserController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hao-security-demo/target/classes/com/hao/security/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-demo/target/classes/com/hao/security/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hao-security-demo/target/test-classes/META-INF/hao-security-demo.kotlin_module" beforeDir="false" />
@@ -34,11 +46,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            <state relative-caret-position="114">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/DemoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -46,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/controller/FileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="54" lean-forward="true" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            <state relative-caret-position="-199">
+              <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hao-security-demo/src/test/java/com/hao/security/UserControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-66">
+            <state relative-caret-position="-104">
               <caret line="97" column="24" lean-forward="true" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
             </state>
           </provider>
@@ -121,16 +142,17 @@
         <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/entity/User.java" />
         <option value="$PROJECT_DIR$/hao-security-demo/src/main/resources/error/500.html" />
         <option value="$PROJECT_DIR$/hao-security-demo/src/main/resources/error/404.html" />
-        <option value="$PROJECT_DIR$/hao-security-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/DemoController.java" />
         <option value="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/UserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java" />
         <option value="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityController.java" />
-        <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/security/MyUserDetailsService.java" />
         <option value="$PROJECT_DIR$/hao-security-core/pom.xml" />
         <option value="$PROJECT_DIR$/hao-security-demo/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/controller/FileController.java" />
         <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/hao-security-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/DemoController.java" />
+        <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/security/MyUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/controller/FileController.java" />
       </list>
     </option>
   </component>
@@ -310,7 +332,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/BaiduNetdiskDownload/Spring Security开发安全的REST服务/project/p1o6vt/imooc-security" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../itlemon-lemon-security-master/lemon-security/chapter007/lemon-security" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -329,7 +351,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoController">
+  <component name="RunManager" selected="JUnit.UserControllerTest.fileUploadSuccess">
     <configuration default="true" type="Applet">
       <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
@@ -515,7 +537,7 @@
       <workItem from="1561703713176" duration="291000" />
       <workItem from="1561944099854" duration="623000" />
       <workItem from="1561967118367" duration="5840000" />
-      <workItem from="1562055113449" duration="1291000" />
+      <workItem from="1562055113449" duration="3172000" />
     </task>
     <task id="LOCAL-00001" summary="记笔记">
       <created>1561382025990</created>
@@ -601,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562030520773</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="spring security start">
+      <created>1562056418844</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1562056418844</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -637,13 +666,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59997000" />
+    <option name="totallyTimeSpent" value="61878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1233" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27914894" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27914894" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -654,7 +683,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3283582" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3681592" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.3681592" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.5787728" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -694,25 +723,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="spring security start" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/validator/MyConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/validator/MyConstraintValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/service/impl/HelloServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -954,27 +964,10 @@
     <entry file="file://$MAVEN_REPOSITORY$/io/springfox/springfox-swagger-ui/2.7.0/springfox-swagger-ui-2.7.0.pom">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-demo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityBeanConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/DemoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1026,16 +1019,6 @@
     <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/controller/1562055879234.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/security/MyUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/config/WebConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -1046,27 +1029,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/test/java/com/hao/security/UserControllerTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-crypto/4.2.3.RELEASE/spring-security-crypto-4.2.3.RELEASE.jar!/org/springframework/security/crypto/password/PasswordEncoder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="97" column="24" lean-forward="true" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/controller/FileController.java">
+    <entry file="file://$PROJECT_DIR$/hao-security-demo/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="21" column="54" lean-forward="true" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/DemoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/security/MyUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/config/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        <state relative-caret-position="109">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-199">
+          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-demo/src/test/java/com/hao/security/UserControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="97" column="24" lean-forward="true" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
         </state>
       </provider>
     </entry>

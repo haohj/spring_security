@@ -1,10 +1,9 @@
 package com.hao.security.web.controller;
 
 import com.hao.security.entity.FileInfo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import cn.hutool.core.io.IoUtil;
@@ -12,10 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 
-@RestController("/file")
+@RestController
+@RequestMapping("/file")
 public class FileController {
     private String folder = "D:\\MyCode\\spring_security\\hao-security-demo\\src\\main\\java\\com\\hao\\security\\web\\controller";
     @PostMapping
+    @ApiOperation(value = "文件上传接口", notes = "访问此接口可以实现文件上传")
+    @ApiImplicitParam(name = "file", value = "使用MultipartFile的实例对象来接收文件数据", required = true, dataTypeClass = MultipartFile.class)
     public FileInfo upload(MultipartFile file) throws Exception {
         System.out.println("上传文件的表单name值为：" + file.getName());
         System.out.println("文件路径为：" + file.getOriginalFilename());
