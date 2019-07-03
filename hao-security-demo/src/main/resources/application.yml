@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  # \u6570\u636E\u5E93\u914D\u7F6E
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: mysql
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    # \u914D\u7F6EDruid\u8FDE\u63A5\u6C60
+    type: com.alibaba.druid.pool.DruidDataSource
+  # \u914D\u7F6Esession\u5B58\u50A8\u65B9\u5F0F\uFF0C\u6682\u65F6\u5173\u6389\u8BE5\u529F\u80FD
+  session:
+    store-type: none
+  server:
+    port: 8080
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: jtzsw_redis
+    timeout: 6000
+
+# \u9996\u5148\u5C06\u6743\u9650\u9A8C\u8BC1\u5173\u95ED
+#security:
+#  basic:
+#    enabled: false
+
+
+# \u914D\u7F6E\u56FE\u5F62\u9A8C\u8BC1\u7801
+com:
+  hao:
+    security:
+      code:
+        image:
+          length: 6
+          url: /user,/user/*
+      browser:
+        ## \u914D\u7F6E\u81EA\u5B9A\u4E49\u7684\u767B\u5F55\u9875\u9762
+        #loginPage: /hao-login.html
+        # \u914D\u7F6E\u81EA\u5B9A\u4E49\u6210\u529F\u548C\u9519\u8BEF\u5904\u7406\u65B9\u5F0F
+        #loginType: REDIRECT

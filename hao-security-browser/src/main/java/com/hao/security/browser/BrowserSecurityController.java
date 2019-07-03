@@ -22,6 +22,7 @@ import java.io.IOException;
 @RestController
 @Slf4j
 public class BrowserSecurityController {
+
     private RequestCache requestCache = new HttpSessionRequestCache();
 
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();

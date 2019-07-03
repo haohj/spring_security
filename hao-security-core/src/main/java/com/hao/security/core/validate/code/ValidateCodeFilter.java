@@ -28,34 +28,52 @@ import java.util.Set;
 public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
     private static final String SUBMIT_FORM_DATA_PATH = "/authentication/form";
+
     private AuthenticationFailureHandler authenticationFailureHandler;
+
     private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
+
     private Set<String> urls = new HashSet<>();
+
     private SecurityProperties securityProperties;
+
     private final AntPathMatcher antPathMatcher = new AntPathMatcher();
 
+    @Override
+    public void afterPropertiesSet() throws ServletException {
+        super.afterPropertiesSet();
+        String[] configUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(securityProperties.getCode().getImage().getUrl(), ",");
+        urls.addAll(Arrays.asList(configUrls));
+        // 登录的链接是必须要进行验证码验证的
+        urls.add(SUBMIT_FORM_DATA_PATH);
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         boolean action = false;
         for (String url : urls) {
-            if(antPathMatcher.match(url,request.getRequestURI())){
-                // 如果实际访问的URL可以与用户在YML配置文件中配置的相同，那么就进行验证码校验
+            // 如果实际访问的URL可以与用户在YML配置文件中配置的相同，那么就进行验证码校验
+            if (antPathMatcher.match(url, request.getRequestURI())) {
                 action = true;
             }
         }
-
-        if(action){
+        if (action) {
             try {
                 validate(new ServletWebRequest(request));
-            }catch (ValidateCodeException e){
-                authenticationFailureHandler.onAuthenticationFailure(request,response,e);
+            } catch (ValidateCodeException e) {
+                authenticationFailureHandler.onAuthenticationFailure(request, response, e);
                 return;
             }
         }
-        filterChain.doFilter(request,response);
+        filterChain.doFilter(request, response);
     }
 
+    /**
+     * 验证码校验逻辑
+     *
+     * @param request 请求
+     * @throws ServletRequestBindingException 请求异常
+     */
     private void validate(ServletWebRequest request) throws ServletRequestBindingException {
         // 从session中获取图片验证码
         ImageCode imageCodeInSession = (ImageCode) sessionStrategy.getAttribute(request, ValidateCodeController.SESSION_KEY);
@@ -76,14 +94,5 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
         }
         // 验证成功，删除session中的验证码
         sessionStrategy.removeAttribute(request, ValidateCodeController.SESSION_KEY);
-    }
-
-    @Override
-    public void afterPropertiesSet() throws ServletException {
-        super.afterPropertiesSet();
-        String[] configUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(securityProperties.getCode().getImage().getUrl(), ",");
-        urls.addAll(Arrays.asList(configUrls));
-        // 登录的链接是必须要进行验证码验证的
-        urls.add(SUBMIT_FORM_DATA_PATH);
     }
 }

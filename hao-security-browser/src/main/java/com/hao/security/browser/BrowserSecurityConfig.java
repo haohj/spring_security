@@ -20,14 +20,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final SecurityProperties securityProperties;
-    private final AuthenticationSuccessHandler authenticationSuccessHandler;
-    private final AuthenticationFailureHandler authenticationFailureHandler;
+    private final AuthenticationSuccessHandler myAuthenticationSuccessHandler;
+    private final AuthenticationFailureHandler myAuthenticationFailureHandler;
 
     @Autowired
-    public BrowserSecurityConfig(SecurityProperties securityProperties, AuthenticationSuccessHandler authenticationSuccessHandler, AuthenticationFailureHandler authenticationFailureHandler) {
+    public BrowserSecurityConfig(SecurityProperties securityProperties, AuthenticationSuccessHandler myAuthenticationSuccessHandler, AuthenticationFailureHandler myAuthenticationFailureHandler) {
         this.securityProperties = securityProperties;
-        this.authenticationSuccessHandler = authenticationSuccessHandler;
-        this.authenticationFailureHandler = authenticationFailureHandler;
+        this.myAuthenticationFailureHandler = myAuthenticationFailureHandler;
+        this.myAuthenticationSuccessHandler = myAuthenticationSuccessHandler;
     }
 
     /**
@@ -44,7 +44,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         ValidateCodeFilter validateCodeFilter = new ValidateCodeFilter();
-        validateCodeFilter.setAuthenticationFailureHandler(authenticationFailureHandler);
+        validateCodeFilter.setAuthenticationFailureHandler(myAuthenticationFailureHandler);
         validateCodeFilter.setSecurityProperties(securityProperties);
         validateCodeFilter.afterPropertiesSet();
 
@@ -52,16 +52,14 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/authentication/require")
                 .loginProcessingUrl("/authentication/form")
-                .successHandler(authenticationSuccessHandler)
-                .failureHandler(authenticationFailureHandler)
+                .successHandler(myAuthenticationSuccessHandler)
+                .failureHandler(myAuthenticationFailureHandler)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/authentication/require", securityProperties.getBrowserProperties().getLoginPage(), "/code/image")
-                .permitAll()
+                .antMatchers("/authentication/require", securityProperties.getBrowserProperties().getLoginPage(), "/code/image").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
-                .csrf()
-                .disable();
+                .csrf().disable();
     }
 }

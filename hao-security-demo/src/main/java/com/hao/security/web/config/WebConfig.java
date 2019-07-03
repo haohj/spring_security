@@ -23,7 +23,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(timeInterceptor);
     }
 
-    //@Bean
+    @Bean
     public FilterRegistrationBean timeFilter() {
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();
         TimeFilter timeFilter = new TimeFilter();
