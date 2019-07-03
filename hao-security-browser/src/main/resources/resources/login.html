@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎登录</title>
+</head>
+<body>
+<h2>标准登录页</h2>
+<form action="/authentication/form" method="post">
+    <table>
+        <tr>
+            <td>用户名：</td>
+            <td><input name="username" type="text"></td>
+        </tr>
+        <tr>
+            <td>密 码：</td>
+            <td><input name="password" type="password"></td>
+        </tr>
+        <tr>
+            <td>图形验证码：</td>
+            <td>
+                <input name="imageCode" type="text">
+                <img src="/code/image?width=90&height=30">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">登录</button>
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
