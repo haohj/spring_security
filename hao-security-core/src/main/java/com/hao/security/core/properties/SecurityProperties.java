@@ -7,4 +7,5 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "com.hao.security")
 public class SecurityProperties {
     private BrowserProperties browserProperties = new BrowserProperties();
+    private ValidateCodeProperties code = new ValidateCodeProperties();
 }
