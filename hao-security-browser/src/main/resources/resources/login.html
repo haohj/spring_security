@@ -34,6 +34,39 @@
 
     </table>
 </form>
+<h2>标准登录页</h2>
+<form action="/authentication/mobile" method="post">
+    <table>
+        <tr>
+            <td>手机号：</td>
+            <td><input name="mobile" type="text" value="15912345678"></td>
+        </tr>
+        <tr>
+            <td>短信验证码：</td>
+            <td>
+                <input name="smsCode" type="text">
+                <input type="button" value="发送" onclick="sendSmsCode()">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">登录</button>
+            </td>
+        </tr>
+
+    </table>
+</form>
+
 
 </body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    <!-- 发送验证码 -->
+    function sendSmsCode() {
+        $.get(
+            "/code/sms",
+            {"mobile": $("input[name='mobile']").val()}
+        );
+    }
+</script>
 </html>
