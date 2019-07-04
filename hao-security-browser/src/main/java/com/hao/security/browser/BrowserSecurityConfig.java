@@ -3,6 +3,7 @@ package com.hao.security.browser;
 import com.hao.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.hao.security.core.properties.SecurityProperties;
 import com.hao.security.core.validate.code.image.ImageCodeFilter;
+import com.hao.security.core.validate.code.sms.SmsCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -70,7 +71,13 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
         imageCodeFilter.setSecurityProperties(securityProperties);
         imageCodeFilter.afterPropertiesSet();
 
+        SmsCodeFilter smsCodeFilter = new SmsCodeFilter();
+        smsCodeFilter.setAuthenticationFailureHandler(myAuthenticationFailureHandler);
+        smsCodeFilter.setSecurityProperties(securityProperties);
+        smsCodeFilter.afterPropertiesSet();
+
         http.addFilterBefore(imageCodeFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(smsCodeFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
                 .loginPage("/authentication/require")
                 .loginProcessingUrl("/authentication/form")
