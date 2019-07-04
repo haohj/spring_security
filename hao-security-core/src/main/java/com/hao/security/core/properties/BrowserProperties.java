@@ -7,4 +7,6 @@ public class BrowserProperties {
     private String loginPage = "/login.html";
 
     private LoginType loginType = LoginType.JSON;
+
+    private int rememberMeSeconds = 3600;
 }
