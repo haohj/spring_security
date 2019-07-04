@@ -1,5 +1,6 @@
 package com.hao.security.browser;
 
+import com.hao.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import com.hao.security.core.properties.SecurityProperties;
 import com.hao.security.core.validate.code.image.ImageCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +59,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsService userDetailsService;
 
+    @Autowired
+    private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
@@ -83,6 +87,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated()
                 .and()
-                .csrf().disable();
+                .csrf().disable()
+                .apply(smsCodeAuthenticationSecurityConfig);
     }
 }

@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4134c2f3-ff34-4dc8-9422-9f4beb707745" name="Default" comment="短信验证码，登录验证">
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java" afterDir="false" />
     </list>
     <list id="35de8f33-30e2-42e7-be04-8b611dcc9062" name="ignored" comment="">
       <change beforePath="$PROJECT_DIR$/hao-security-demo/target/classes/application.properties" beforeDir="false" />
@@ -35,30 +35,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationToken.java">
+        <entry file="file://$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="101">
+              <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#259#260#0" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#363#364#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java">
+        <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="-431">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#669#670#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,8 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/DemoController.java" />
-        <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/security/MyUserDetailsService.java" />
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/properties/LoginType.java" />
         <option value="$PROJECT_DIR$/hao-security-browser/src/main/resources/resources/hao-login.html" />
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/SecurityCoreConfig.java" />
@@ -151,11 +143,13 @@
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/image/ImageCodeFilter.java" />
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeController.java" />
         <option value="$PROJECT_DIR$/hao-security-browser/src/main/resources/resources/login.html" />
-        <option value="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java" />
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeProcessor.java" />
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsAuthenticationToken.java" />
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationToken.java" />
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java" />
+        <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java" />
       </list>
     </option>
   </component>
@@ -166,7 +160,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
+    <option name="y" value="21" />
     <option name="width" value="1920" />
     <option name="height" value="1014" />
   </component>
@@ -589,7 +583,7 @@
       <workItem from="1562055113449" duration="4107000" />
       <workItem from="1562114285447" duration="2473000" />
       <workItem from="1562117292949" duration="18921000" />
-      <workItem from="1562200337988" duration="21640000" />
+      <workItem from="1562200337988" duration="22427000" />
     </task>
     <task id="LOCAL-00001" summary="记笔记">
       <created>1561382025990</created>
@@ -822,7 +816,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562226703101</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="短信验证码，登录验证">
+      <created>1562229767013</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1562229767013</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -858,13 +859,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105847000" />
+    <option name="totallyTimeSpent" value="106634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1233" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29446808" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29446808" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -876,7 +877,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3283582" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3681592" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.40630183" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.40630183" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -1279,20 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/MyAuthenticationFailureHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -1333,16 +1320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89">
-          <caret line="65" column="64" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1355,26 +1332,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationToken.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="-64">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#1813#1814#0" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="191">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/authentication/mobile/SmsCodeAuthenticationSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-431">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
