@@ -1,7 +1,7 @@
 package com.hao.security.browser;
 
 import com.hao.security.core.properties.SecurityProperties;
-import com.hao.security.core.validate.code.ValidateCodeFilter;
+import com.hao.security.core.validate.code.image.ImageCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -61,12 +61,12 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        ValidateCodeFilter validateCodeFilter = new ValidateCodeFilter();
-        validateCodeFilter.setAuthenticationFailureHandler(myAuthenticationFailureHandler);
-        validateCodeFilter.setSecurityProperties(securityProperties);
-        validateCodeFilter.afterPropertiesSet();
+        ImageCodeFilter imageCodeFilter = new ImageCodeFilter();
+        imageCodeFilter.setAuthenticationFailureHandler(myAuthenticationFailureHandler);
+        imageCodeFilter.setSecurityProperties(securityProperties);
+        imageCodeFilter.afterPropertiesSet();
 
-        http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
+        http.addFilterBefore(imageCodeFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
                 .loginPage("/authentication/require")
                 .loginProcessingUrl("/authentication/form")

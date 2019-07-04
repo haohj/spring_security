@@ -1,8 +1,7 @@
-package com.hao.security.core.validate.code;
+package com.hao.security.core.validate.code.image;
 
 import com.hao.security.core.properties.SecurityProperties;
-import com.hao.security.core.validate.code.image.ImageCode;
-import com.hao.security.core.validate.code.image.ImageCodeProcessor;
+import com.hao.security.core.validate.code.ValidateCodeException;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.apache.commons.lang3.StringUtils;
@@ -25,11 +24,14 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+import static com.hao.security.core.validate.code.ValidateCodeProcessor.SESSION_KEY_PREFIX;
+
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
+public class ImageCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
     private static final String SUBMIT_FORM_DATA_PATH = "/authentication/form";
+    private static final String IMAGE_SESSION_KEY = SESSION_KEY_PREFIX + "IMAGE";
 
     private AuthenticationFailureHandler authenticationFailureHandler;
 
@@ -78,7 +80,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
      */
     private void validate(ServletWebRequest request) throws ServletRequestBindingException {
         // 从session中获取图片验证码
-        ImageCode imageCodeInSession = (ImageCode) sessionStrategy.getAttribute(request, ImageCodeProcessor.SESSION_KEY);
+        ImageCode imageCodeInSession = (ImageCode) sessionStrategy.getAttribute(request, IMAGE_SESSION_KEY);
         // 从请求中获取用户填写的验证码
         String imageCodeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "imageCode");
         if (StringUtils.isBlank(imageCodeInRequest)) {
@@ -88,13 +90,13 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
             throw new ValidateCodeException("验证码不存在");
         }
         if (imageCodeInSession.isExpired()) {
-            sessionStrategy.removeAttribute(request, ImageCodeProcessor.SESSION_KEY);
+            sessionStrategy.removeAttribute(request, IMAGE_SESSION_KEY);
             throw new ValidateCodeException("验证码已过期");
         }
         if (!StringUtils.equalsIgnoreCase(imageCodeInRequest, imageCodeInSession.getCode())) {
             throw new ValidateCodeException("验证码不匹配");
         }
         // 验证成功，删除session中的验证码
-        sessionStrategy.removeAttribute(request, ImageCodeProcessor.SESSION_KEY);
+        sessionStrategy.removeAttribute(request, IMAGE_SESSION_KEY);
     }
 }

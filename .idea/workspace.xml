@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4134c2f3-ff34-4dc8-9422-9f4beb707745" name="Default" comment="实现记住我">
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/properties/CodeProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/properties/SmsCodeProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/image/ImageCodeProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/impl/AbstractValidateCodeProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/DefaultSmsCodeSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeSender.java" afterDir="false" />
+    <list default="true" id="4134c2f3-ff34-4dc8-9422-9f4beb707745" name="Default" comment="短信验证码，登录验证">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/properties/ImageCodeProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/properties/ImageCodeProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/properties/ValidateCodeProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/properties/ValidateCodeProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ImageCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/image/ImageCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ImageCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/image/ImageCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeBeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeBeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/image/ImageCodeFilter.java" afterDir="false" />
     </list>
     <list id="35de8f33-30e2-42e7-be04-8b611dcc9062" name="ignored" comment="">
       <change beforePath="$PROJECT_DIR$/hao-security-demo/target/classes/application.properties" beforeDir="false" />
@@ -51,32 +33,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeProcessor.java">
+        <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/DefaultSmsCodeSender.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="76">
+              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeFilter.java">
+        <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/image/ImageCodeFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
+            <state relative-caret-position="1374">
+              <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,7 +93,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hao-security-demo/src/main/resources/error/404.html" />
         <option value="$PROJECT_DIR$/hao-security-browser/src/main/java/com/hao/security/browser/UserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/controller/FileController.java" />
         <option value="$PROJECT_DIR$/hao-security-demo/src/main/java/com/hao/security/web/config/SwaggerConfig.java" />
@@ -175,6 +143,7 @@
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/DefaultSmsCodeSender.java" />
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeSender.java" />
         <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeFilter.java" />
+        <option value="$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/image/ImageCodeFilter.java" />
       </list>
     </option>
   </component>
@@ -244,16 +213,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="authentication" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring_security" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring_security" type="462c0819:PsiDirectoryNode" />
-              <item name="hao-security-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -266,17 +225,6 @@
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring_security" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring_security" type="462c0819:PsiDirectoryNode" />
-              <item name="hao-security-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring_security" type="b2602c69:ProjectViewProjectNode" />
@@ -545,7 +493,7 @@
       <workItem from="1562055113449" duration="4107000" />
       <workItem from="1562114285447" duration="2473000" />
       <workItem from="1562117292949" duration="18921000" />
-      <workItem from="1562200337988" duration="17075000" />
+      <workItem from="1562200337988" duration="17615000" />
     </task>
     <task id="LOCAL-00001" summary="记笔记">
       <created>1561382025990</created>
@@ -757,7 +705,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562211531868</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="短信验证码，登录验证">
+      <created>1562225203733</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1562225203733</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -793,11 +748,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101282000" />
+    <option name="totallyTimeSpent" value="101822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1233" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29446808" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -858,7 +812,8 @@
     <MESSAGE value="文件上传" />
     <MESSAGE value="spring security start" />
     <MESSAGE value="实现记住我" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现记住我" />
+    <MESSAGE value="短信验证码，登录验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="短信验证码，登录验证" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -1190,16 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-817">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1228,13 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeBeanConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -1247,17 +1185,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#653#654#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeSender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -1265,17 +1192,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/DefaultSmsCodeSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5-sources.jar!/org/apache/commons/lang3/StringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="3170" column="27" selection-start-line="3170" selection-start-column="27" selection-end-line="3170" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1290,10 +1220,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeFilter.java">
+    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/DefaultSmsCodeSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
+        <state relative-caret-position="133">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/sms/SmsCodeProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/ValidateCodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hao-security-core/src/main/java/com/hao/security/core/validate/code/image/ImageCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1374">
+          <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
