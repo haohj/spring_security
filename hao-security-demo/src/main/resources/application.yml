@@ -38,7 +38,7 @@ com:
         image:
           length: 6
           url: /user,/user/*
-      browser:
+      #browser:
         ## \u914D\u7F6E\u81EA\u5B9A\u4E49\u7684\u767B\u5F55\u9875\u9762
         #loginPage: /hao-login.html
         # \u914D\u7F6E\u81EA\u5B9A\u4E49\u6210\u529F\u548C\u9519\u8BEF\u5904\u7406\u65B9\u5F0F
