@@ -53,7 +53,7 @@ public class BrowserSecurityController {
             log.info("引发跳转的请求是：{}", redirectUrl);
             if (StringUtils.endsWithIgnoreCase(redirectUrl, HTML)) {
                 // 如果是HTML请求，那么就直接跳转到HTML，不再执行后面的代码
-                redirectStrategy.sendRedirect(request, response, securityProperties.getBrowserProperties().getLoginPage());
+                redirectStrategy.sendRedirect(request, response, securityProperties.getBrowser().getLoginPage());
             }
         }
         return new SimpleResponse("访问的服务需要身份认证，请引导用户到登录页面");
