@@ -1,6 +1,8 @@
-package com.hao.security.core.validate.code;
+package com.hao.security.core.validate.code.image;
 
 import com.hao.security.core.properties.SecurityProperties;
+import com.hao.security.core.validate.code.ValidateCodeGenerator;
+import com.hao.security.core.validate.code.image.ImageCode;
 import lombok.Data;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;

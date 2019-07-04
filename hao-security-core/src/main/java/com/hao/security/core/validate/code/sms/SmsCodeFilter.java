@@ -1,8 +1,7 @@
-package com.hao.security.core.validate.code;
+package com.hao.security.core.validate.code.sms;
 
 import com.hao.security.core.properties.SecurityProperties;
-import com.hao.security.core.validate.code.image.ImageCode;
-import com.hao.security.core.validate.code.image.ImageCodeProcessor;
+import com.hao.security.core.validate.code.ValidateCodeException;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.apache.commons.lang3.StringUtils;
@@ -27,9 +26,9 @@ import java.util.Set;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
-
-    private static final String SUBMIT_FORM_DATA_PATH = "/authentication/form";
+public class SmsCodeFilter extends OncePerRequestFilter implements InitializingBean {
+    private static final String SUBMIT_FORM_DATA_PATH = "/authentication/mobile";
+    private static final String SMS_SESSION_KEY = "smsSessionKey";
 
     private AuthenticationFailureHandler authenticationFailureHandler;
 
@@ -40,15 +39,6 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
     private SecurityProperties securityProperties;
 
     private final AntPathMatcher antPathMatcher = new AntPathMatcher();
-
-    @Override
-    public void afterPropertiesSet() throws ServletException {
-        super.afterPropertiesSet();
-        String[] configUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(securityProperties.getCode().getImage().getUrl(), ",");
-        urls.addAll(Arrays.asList(configUrls));
-        // 登录的链接是必须要进行验证码验证的
-        urls.add(SUBMIT_FORM_DATA_PATH);
-    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -62,12 +52,11 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
         if (action) {
             try {
                 validate(new ServletWebRequest(request));
-            } catch (ValidateCodeException e) {
-                authenticationFailureHandler.onAuthenticationFailure(request, response, e);
+            }catch (ValidateCodeException e){
+                authenticationFailureHandler.onAuthenticationFailure(request,response,e);
                 return;
             }
         }
-        filterChain.doFilter(request, response);
     }
 
     /**
@@ -77,24 +66,34 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
      * @throws ServletRequestBindingException 请求异常
      */
     private void validate(ServletWebRequest request) throws ServletRequestBindingException {
-        // 从session中获取图片验证码
-        ImageCode imageCodeInSession = (ImageCode) sessionStrategy.getAttribute(request, ImageCodeProcessor.SESSION_KEY);
+        // 从session中获取短信验证码
+        SmsCode smsCodeInSession = (SmsCode) sessionStrategy.getAttribute(request,SMS_SESSION_KEY);
         // 从请求中获取用户填写的验证码
-        String imageCodeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "imageCode");
-        if (StringUtils.isBlank(imageCodeInRequest)) {
+        String smsCodeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "smsCode");
+        if (StringUtils.isBlank(smsCodeInRequest)) {
             throw new ValidateCodeException("验证码不能为空");
         }
-        if (null == imageCodeInSession) {
+        if (null == smsCodeInSession) {
             throw new ValidateCodeException("验证码不存在");
         }
-        if (imageCodeInSession.isExpired()) {
-            sessionStrategy.removeAttribute(request, ImageCodeProcessor.SESSION_KEY);
+        if (smsCodeInSession.isExpired()) {
+            sessionStrategy.removeAttribute(request, SMS_SESSION_KEY);
             throw new ValidateCodeException("验证码已过期");
         }
-        if (!StringUtils.equalsIgnoreCase(imageCodeInRequest, imageCodeInSession.getCode())) {
+        if (!StringUtils.equalsIgnoreCase(smsCodeInRequest, smsCodeInSession.getCode())) {
             throw new ValidateCodeException("验证码不匹配");
         }
         // 验证成功，删除session中的验证码
-        sessionStrategy.removeAttribute(request, ImageCodeProcessor.SESSION_KEY);
+        sessionStrategy.removeAttribute(request, SMS_SESSION_KEY);
+
+    }
+
+    @Override
+    public void afterPropertiesSet() throws ServletException {
+        super.afterPropertiesSet();
+        String[] configUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(securityProperties.getCode().getSms().getUrl(), ",");
+        urls.addAll(Arrays.asList(configUrls));
+        // 登录的链接是必须要进行验证码验证的
+        urls.add(SUBMIT_FORM_DATA_PATH);
     }
 }
