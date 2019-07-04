@@ -27,16 +27,15 @@ public class MyAuthenticationSuccessHandler extends SavedRequestAwareAuthenticat
     }
 
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws ServletException, IOException {
-        log.info("登陆成功");
-        if(LoginType.JSON.equals(securityProperties.getBrowserProperties().getLoginType())){
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+        log.info("登录成功");
+        if (LoginType.JSON.equals(securityProperties.getBrowser().getLoginType())) {
             // 如果用户自定义了处理成功后返回JSON（默认方式也是JSON），那么这里就返回JSON
             response.setContentType("application/json;charset=UTF-8");
             response.getWriter().write(objectMapper.writeValueAsString(authentication));
-        }else {
+        } else {
             // 如果用户定义的是跳转，那么就使用父类方法进行跳转
-            super.onAuthenticationSuccess(request,response,authentication);
+            super.onAuthenticationSuccess(request, response, authentication);
         }
-
     }
 }
