@@ -1,6 +1,8 @@
 package com.hao.security.core.social.qq.config;
 
+import com.hao.security.core.properties.QQProperties;
 import com.hao.security.core.properties.SecurityProperties;
+import com.hao.security.core.social.qq.connect.QQConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.social.SocialAutoConfigurerAdapter;
@@ -19,6 +21,7 @@ public class QQAutoConfiguration extends SocialAutoConfigurerAdapter {
 
     @Override
     protected ConnectionFactory<?> createConnectionFactory() {
-        return null;
+        QQProperties qqProperties = securityProperties.getSocial().getQq();
+        return new QQConnectionFactory(qqProperties.getProviderId(), qqProperties.getAppId(), qqProperties.getAppSecret());
     }
 }
