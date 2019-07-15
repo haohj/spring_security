@@ -30,16 +30,20 @@ spring:
 #    enabled: false
 
 
-# \u914D\u7F6E\u56FE\u5F62\u9A8C\u8BC1\u7801
+# 配置图形验证码
 com:
   hao:
     security:
       code:
         image:
+          length: 4
+          url: /user,/user/*
+        # 配置短信验证码
+        sms:
           length: 6
           url: /user,/user/*
-      #browser:
-        ## \u914D\u7F6E\u81EA\u5B9A\u4E49\u7684\u767B\u5F55\u9875\u9762
-        #loginPage: /hao-login.html
-        # \u914D\u7F6E\u81EA\u5B9A\u4E49\u6210\u529F\u548C\u9519\u8BEF\u5904\u7406\u65B9\u5F0F
-        #loginType: REDIRECT
+      social:
+        qq:
+          app-id: 101547587
+          app-secret: c3329b622cf39480774fe483d1d1a546
+        filterProcessesUrl: /authentication

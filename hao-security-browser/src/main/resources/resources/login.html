@@ -10,17 +10,23 @@
     <table>
         <tr>
             <td>用户名：</td>
-            <td><input name="username" type="text"></td>
+            <td><label>
+                <input name="username" type="text">
+            </label></td>
         </tr>
         <tr>
             <td>密 码：</td>
-            <td><input name="password" type="password"></td>
+            <td><label>
+                <input name="password" type="password">
+            </label></td>
         </tr>
         <tr>
             <td>图形验证码：</td>
             <td>
-                <input name="imageCode" type="text">
-                <img src="/code/image?width=90&height=30">
+                <label>
+                    <input name="imageCode" type="text">
+                </label>
+                <img src="/code/image?width=90&height=30" alt="">
             </td>
         </tr>
         <tr>
@@ -34,17 +40,21 @@
 
     </table>
 </form>
-<h2>标准登录页</h2>
+<h2>手机号登录页</h2>
 <form action="/authentication/mobile" method="post">
     <table>
         <tr>
             <td>手机号：</td>
-            <td><input name="mobile" type="text" value="15912345678"></td>
+            <td><label>
+                <input name="mobile" type="text" value="15912345678">
+            </label></td>
         </tr>
         <tr>
             <td>短信验证码：</td>
             <td>
-                <input name="smsCode" type="text">
+                <label>
+                    <input name="smsCode" type="text">
+                </label>
                 <input type="button" value="发送" onclick="sendSmsCode()">
             </td>
         </tr>
@@ -56,7 +66,9 @@
 
     </table>
 </form>
-
+<h2>社交登录</h2>
+<!-- /auth是类SocialAuthenticationFilter规定的，/qq是providerId -->
+<a href="/authentication/qq"><img src="http://qzonestyle.gtimg.cn/qzone/vas/opensns/res/img/Connect_logo_3.png"></a>
 
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
